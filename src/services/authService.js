@@ -1,8 +1,9 @@
+import axios from 'axios'
 import api from './api'
 
 const authService = {
   async register(name, email, password) {
-    const response = await api.post('https://torus-backend-s3ws.onrender.com/api/auth/register', { name, email, password })
+    const response = await axios.post('https://torus-backend-s3ws.onrender.com/api/auth/register', { name, email, password })
     if (response.data.token) {
       localStorage.setItem('token', response.data.token)
     }
@@ -10,7 +11,7 @@ const authService = {
   },
 
   async login(email, password) {
-    const response = await api.post('https://torus-backend-s3ws.onrender.com/api/auth/login', { email, password })
+    const response = await axios.post('https://torus-backend-s3ws.onrender.com/api/auth/login', { email, password })
     if (response.data.token) {
       localStorage.setItem('token', response.data.token)
     }
@@ -24,7 +25,7 @@ const authService = {
   async getCurrentUser() {
     const token = localStorage.getItem('token')
     if (token) {
-      const response = await api.get('https://torus-backend-s3ws.onrender.com/api/auth/me')
+      const response = await axios.get('https://torus-backend-s3ws.onrender.com/api/auth/me')
       return response.data
     }
     return null

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import api from '../../services/api'
 import TaskItem from './TaskItem'
 import styles from './TaskList.module.css'
+import axios from 'axios'
 
 const TaskList = () => {
     const [tasks, setTasks] = useState([])
@@ -12,7 +13,7 @@ const TaskList = () => {
     useEffect(() => {
         const fetchTasks = async () => {
             try {
-                const response = await api.get('/tasks')
+                const response = await axios.get('https://torus-backend-s3ws.onrender.com/api/tasks')
                 setTasks(response.data.tasks)
                 setLoading(false)
             } catch (err) {

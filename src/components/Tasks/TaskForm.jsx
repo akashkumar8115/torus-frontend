@@ -18,7 +18,7 @@ const TaskForm = () => {
     if (id) {
       const fetchTask = async () => {
         try {
-          const response = await api.get(`/tasks/${id}`)
+          const response = await axios.get(`https://torus-backend-s3ws.onrender.com/api/tasks/${id}`)
           const task = response.data
           setTitle(task.title)
           setDescription(task.description)
@@ -37,9 +37,9 @@ const TaskForm = () => {
     e.preventDefault()
     try {
       if (id) {
-        await api.put(`/tasks/${id}`, { title, description, dueDate, status, priority })
+        await axios.put(`https://torus-backend-s3ws.onrender.com/api/tasks/${id}`, { title, description, dueDate, status, priority })
       } else {
-        await api.post('/tasks', { title, description, dueDate, status, priority })
+        await axios.post('https://torus-backend-s3ws.onrender.com/api/tasks', { title, description, dueDate, status, priority })
       }
       navigate('/')
     } catch (err) {

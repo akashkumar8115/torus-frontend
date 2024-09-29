@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import api from '../../services/api'
 import styles from './TaskSummary.module.css'
+import axios from 'axios'
 
 const TaskSummary = () => {
   const [summary, setSummary] = useState([])
@@ -10,7 +11,7 @@ const TaskSummary = () => {
   useEffect(() => {
     const fetchSummary = async () => {
       try {
-        const response = await api.get('/tasks/summary')
+        const response = await axios.get('https://torus-backend-s3ws.onrender.com/api/tasks/summary')
         setSummary(response.data)
         setLoading(false)
       } catch (err) {
