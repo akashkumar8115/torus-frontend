@@ -1,0 +1,54 @@
+.taskItem {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.taskItem h3 {
+    margin-bottom: 10px;
+}
+
+.taskItem p {
+    margin-bottom: 5px;
+}
+
+.todo {
+    color: #e74c3c;
+}
+
+.inprogress {
+    color: #f39c12;
+}
+
+.completed {
+    color: #2ecc71;
+}
+
+.low {
+    color: #3498db;
+}
+
+.medium {
+    color: #f39c12;
+}
+
+.high {
+    color: #e74c3c;
+}
+
+.editButton {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.editButton:hover {
+    background-color: #2980b9;
+}

@@ -1,0 +1,21 @@
+.registerContainer {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm label {
+  margin-bottom: 5px;
+}
+
+.registerForm button {
+  margin-top: 10px;
+}

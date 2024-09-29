@@ -1,0 +1,34 @@
+.summaryContainer {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.summaryList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.summaryItem {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.status {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.loading,
+.error {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.error {
+    color: var(--error-color);
+}
